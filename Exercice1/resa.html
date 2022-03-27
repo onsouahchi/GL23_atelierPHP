@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="alert alert-info text-center fw-bolder" role="alert"  >
+    Commandez des Sandwichs!
+</div>
+<form method="post" action="recap.php" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="nom" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="nom" name="nom" required>
+    </div>
+    <div class="mb-3">
+        <label for="prenom" class="form-label">Prenom</label>
+        <input type="text" class="form-control" id="prenom" name="prenom" required>
+    </div>
+    <div class="mb-3">
+        <label for="nb" class="form-label">Nombre de sandwichs</label>
+        <input type="number" class="form-control" id="nb" name="nb" required>
+    </div>
+    <div class="form-floating pt-2 pb-3">
+        <label for="Adresse">Adresse</label>
+        <textarea class="form-control" placeholder="Adresse" id="Adresse" name="adresse" required></textarea>
+    </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="options">Type</label>
+        <select class="form-select" id="options" name="type">
+            <option value="viande">Viande</option>
+            <option value="poulet">Poulet</option>
+            <option value="escalope">Escalope</option>
+        </select>
+    </div>
+    <div class="list-group pb-3">
+        <label class="form-label">Extras</label>
+        <label class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="">
+            Harissa
+        </label>
+        <label class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="">
+            Salade
+        </label>
+        <label class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="">
+            Mayo
+        </label>
+    </div>
+    <div class="mb-3">
+        <label for="formFile" class="form-label">CIN</label>
+        <input class="form-control" type="file" id="formFile" name="cin" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Passez Commande</button>
+</form>
+</body>
+</html>
